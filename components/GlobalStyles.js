@@ -11,6 +11,11 @@ const GlobalStyles = createGlobalStyle`
     * {
         box-sizing: border-box;
     }
+    main {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+    }
 `;
 
 export default GlobalStyles;

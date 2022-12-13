@@ -1,3 +1,13 @@
+import Header from "../components/Header";
+import Card from "../components/Card";
+import styled from "styled-components";
+
 export default function Home() {
-  return <h1>Hello Beavers 🦫</h1>;
+  return (
+    <>
+      <Header />
+
+      <Card />
+    </>
+  );
 }
