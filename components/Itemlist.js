@@ -6,7 +6,7 @@ export default function Itemlist() {
     <>
       {shoes.map((shoe) => (
         <StyledItemList>
-          <StyledImage src={shoe.img} width="300px" height="250px" />
+          <StyledImage src={shoe.img} width="50%" height="70%" />
           <StyledListContainer>
             <StyledItemName className="itemName">{shoe.name}</StyledItemName>
             <StyledDivContainer>
@@ -26,8 +26,8 @@ const StyledItemList = styled.section`
   position: relative;
   border: 2px solid black;
   width: 70vw;
-  height: 35vh;
-  border-radius: 10%;
+  height: 300px;
+  border-radius: 40px;
   margin-top: 10px;
 `;
 
@@ -36,6 +36,7 @@ const StyledImage = styled.img`
   margin-left: auto;
   margin-right: auto;
   padding: 2px;
+  margin-top: 5px;
 `;
 
 const StyledListContainer = styled.ul`
@@ -51,7 +52,10 @@ const StyledItemName = styled.li`
 
 const StyledDivContainer = styled.div`
   padding: 15px;
-  margin: 10px;
+  margin: auto;
+  margin-left: 20px;
+  width: 90%;
+  height: 20%;
 `;
 const StyledItemDate = styled.span`
   font-size: 16px;
