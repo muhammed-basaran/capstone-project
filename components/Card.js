@@ -4,14 +4,14 @@ import styled from "styled-components";
 export default function Card() {
   return (
     <>
-      <StyledCard>
+      <StyledCardContainer>
         <Itemlist />
-      </StyledCard>
+      </StyledCardContainer>
     </>
   );
 }
 
-const StyledCard = styled.section`
+const StyledCardContainer = styled.section`
   border: 0px solid black;
   display: flex;
   flex-direction: column;
