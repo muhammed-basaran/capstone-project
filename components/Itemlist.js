@@ -1,18 +1,19 @@
-import { shoes } from "../public/shoes";
+import shoes from "../lib/shoes";
 import styled from "styled-components";
+import Link from "next/link";
 
 export default function Itemlist() {
   return (
     <>
       {shoes.map((shoe) => (
-        <StyledItemListContainer>
-          <StyledImage src={shoe.img} width="50%" height="70%" />
-          <StyledItemName className="itemName">{shoe.name}</StyledItemName>
+        <StyledItemListContainer key={shoe.id}>
+          <Link href={`/../shoes/${shoe.id}`}>
+            <img src={shoe.img} max-width="200px" max-height="200px" />
+            <h2 className="itemName">{shoe.name}</h2>
+          </Link>
           <StyledDivContainer>
-            <StyledItemDate className="releaseDate">
-              {shoe.release}
-            </StyledItemDate>
-            <StyledItemPrice className="price">{shoe.price} €</StyledItemPrice>
+            <span className="releaseDate">{shoe.release}</span>
+            <span className="price">{shoe.price} €</span>
           </StyledDivContainer>
         </StyledItemListContainer>
       ))}
@@ -24,24 +25,28 @@ const StyledItemListContainer = styled.section`
   position: relative;
   border: 2px solid black;
   width: 70vw;
-  height: 300px;
+  height: auto;
   border-radius: 40px;
   margin-top: 10px;
   padding: 2px;
-`;
 
-const StyledImage = styled.img`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2px;
-  margin-top: 5px;
-`;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    margin-top: 5px;
+    width: 60%;
+    height: auto;
+  }
 
-const StyledItemName = styled.h2`
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+  }
 `;
 
 const StyledDivContainer = styled.div`
@@ -50,17 +55,19 @@ const StyledDivContainer = styled.div`
   width: 90%;
   height: 20%;
   padding-bottom: 20px;
-`;
-const StyledItemDate = styled.span`
-  font-size: 16px;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-`;
-const StyledItemPrice = styled.span`
-  font-size: 16px;
-  text-align: right;
-  padding: 0;
-  margin: 0;
-  float: right;
+
+  .releaseDate {
+    font-size: 16px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .price {
+    font-size: 16px;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    float: right;
+  }
 `;
