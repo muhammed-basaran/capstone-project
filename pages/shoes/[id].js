@@ -21,7 +21,6 @@ export default function Overview() {
 
   return (
     <>
-      <Header />
       <StyledContainer>
         <StyledOverviewContainer>
           <Image
@@ -42,7 +41,11 @@ export default function Overview() {
           </StyledInfoContainer>
           <StyledButtonContainer>
             <Link href="/shoes">
-              <button>BACK</button>
+              <button className="back-btn">BACK</button>
+            </Link>
+
+            <Link href={`/shoes/buy/${id}`}>
+              <button className="buy-btn">BUY</button>
             </Link>
           </StyledButtonContainer>
         </StyledOverviewContainer>
@@ -133,4 +136,18 @@ const StyledInfoContainer = styled.section`
 const StyledButtonContainer = styled.section`
   margin: 10px;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+
+  .back-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .buy-btn {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+  }
 `;
