@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Image from "next/image";
 import shoes from "../../lib/shoes";
 import styled from "styled-components";
 import FavoriteIcon from "../../components/FavouriteIcon";
+import ImageSlider from "../../components/ImageSlider";
 
 export default function Overview() {
   const router = useRouter();
@@ -16,7 +16,7 @@ export default function Overview() {
     return <p>Page not Found</p>;
   }
 
-  const { img, name, price, release, title, description1, description2 } =
+  const { images, name, price, release, title, description1, description2 } =
     currentShoe;
 
   return (
@@ -24,12 +24,7 @@ export default function Overview() {
       <StyledContainer>
         <StyledOverviewContainer>
           <FavoriteIcon className="fav" />
-          <Image
-            src={img}
-            alt={`picture of ${name}`}
-            width={300}
-            height={400}
-          />
+          <ImageSlider img={images} />
           <h2 className="itemName">{name}</h2>
           <StyledDivContainer>
             <span className="releaseDate">{release}</span>
@@ -44,7 +39,6 @@ export default function Overview() {
             <Link href="/shoes">
               <button className="back-btn">BACK</button>
             </Link>
-
             <Link href={`/shoes/buy/${id}`}>
               <button className="buy-btn">FORWARD </button>
             </Link>
@@ -72,6 +66,7 @@ const StyledOverviewContainer = styled.section`
   border-radius: 40px;
   margin-top: 10px;
   padding: 2px;
+  overflow: hidden;
 
   .fav {
     width: 2rem;
