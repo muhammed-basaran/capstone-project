@@ -22,6 +22,8 @@ export default function Buy() {
       <StyledContainer>
         <StyledOverviewContainer>
           <h1>Retailer</h1>
+          <p>Click on the name for visiting the retailers Homepage:</p>
+
           {shops.map((shop) => (
             <>
               <StyledLinkContainer>
@@ -68,6 +70,10 @@ const StyledOverviewContainer = styled.section`
     color: black;
     padding-bottom: 10px;
     border-bottom: 1px solid black;
+  }
+
+  p {
+    text-align: center;
   }
 `;
 

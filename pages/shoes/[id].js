@@ -46,7 +46,7 @@ export default function Overview() {
             </Link>
 
             <Link href={`/shoes/buy/${id}`}>
-              <button className="buy-btn">BUY</button>
+              <button className="buy-btn">FORWARD </button>
             </Link>
           </StyledButtonContainer>
         </StyledOverviewContainer>
