@@ -22,8 +22,8 @@ export default function Buy() {
       <StyledContainer>
         <StyledOverviewContainer>
           <h1>Retailer</h1>
-          <p>Click on the name for visiting the retailers Homepage:</p>
 
+          <p>Click on the name for visiting the retailers Homepage:</p>
           {shops.map((shop) => (
             <>
               <StyledLinkContainer>
@@ -33,7 +33,6 @@ export default function Buy() {
               </StyledLinkContainer>
             </>
           ))}
-
           <StyledButtonContainer>
             <Link href={`/shoes/${id}`}>
               <button className="back-btn">BACK</button>
