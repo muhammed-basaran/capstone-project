@@ -3,34 +3,32 @@ import styled from "styled-components";
 export default function ImageSlider() {
   return (
     <>
-      <div>
-        <StyledSlider className="slider">
-          <div className="slides">
-            <input type="radio" name="radio-btn" id="radio1" />
-            <input type="radio" name="radio-btn" id="radio2" />
-            <input type="radio" name="radio-btn" id="radio3" />
-            <input type="radio" name="radio-btn" id="radio4" />
-            <div className="slide first">
-              <img src="/1.png" />
-            </div>
-            <div className="slide">
-              <img src="/2.png" />
-            </div>
-            <div className="slide">
-              <img src="/3.png" />
-            </div>
-            <div className="slide">
-              <img src="/4.png" />
-            </div>
+      <StyledSlider className="slider">
+        <div className="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <div className="slide first">
+            <img src="/1.png" />
           </div>
-          <div className="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
+          <div className="slide">
+            <img src="/2.png" />
           </div>
-        </StyledSlider>
-      </div>
+          <div className="slide">
+            <img src="/3.png" />
+          </div>
+          <div className="slide">
+            <img src="/4.png" />
+          </div>
+        </div>
+        <div className="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </StyledSlider>
     </>
   );
 }
