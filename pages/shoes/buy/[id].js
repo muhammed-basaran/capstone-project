@@ -74,6 +74,7 @@ const StyledOverviewContainer = styled.section`
 const StyledLinkContainer = styled.section`
   border: 1px solid black;
   margin: 10px;
+  background-color: lightgray;
   h3 {
     font-size: 18px;
     font-weight: bold;
@@ -83,6 +84,7 @@ const StyledLinkContainer = styled.section`
   }
   a {
     text-decoration: none;
+    color: black;
   }
 `;
 

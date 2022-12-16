@@ -1,12 +1,14 @@
 import shoes from "../lib/shoes";
 import styled from "styled-components";
 import Link from "next/link";
+import FavoriteIcon from "./FavouriteIcon";
 
 export default function Itemlist() {
   return (
     <>
       {shoes.map((shoe) => (
         <StyledItemListContainer key={shoe.id}>
+          <FavoriteIcon className="fav" />
           <Link href={`/../shoes/${shoe.id}`}>
             <img src={shoe.img} max-width="200px" max-height="200px" />
             <h2 className="itemName">{shoe.name}</h2>
@@ -30,6 +32,12 @@ const StyledItemListContainer = styled.section`
   margin-top: 10px;
   padding: 2px;
 
+  .fav {
+    width: 2rem;
+    position: absolute;
+    right: 15px;
+  }
+
   img {
     display: block;
     margin-left: auto;
@@ -45,6 +53,9 @@ const StyledItemListContainer = styled.section`
     font-weight: bold;
     text-align: center;
     color: black;
+    text-decoration: none;
+  }
+  a {
     text-decoration: none;
   }
 `;
