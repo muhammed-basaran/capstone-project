@@ -2,8 +2,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import shoes from "../../lib/shoes";
-import Header from "../../components/Header";
 import styled from "styled-components";
+import FavoriteIcon from "../../components/FavouriteIcon";
 
 export default function Overview() {
   const router = useRouter();
@@ -23,6 +23,7 @@ export default function Overview() {
     <>
       <StyledContainer>
         <StyledOverviewContainer>
+          <FavoriteIcon className="fav" />
           <Image
             src={img}
             alt={`picture of ${name}`}
@@ -45,7 +46,7 @@ export default function Overview() {
             </Link>
 
             <Link href={`/shoes/buy/${id}`}>
-              <button className="buy-btn">BUY</button>
+              <button className="buy-btn">FORWARD </button>
             </Link>
           </StyledButtonContainer>
         </StyledOverviewContainer>
@@ -71,6 +72,12 @@ const StyledOverviewContainer = styled.section`
   border-radius: 40px;
   margin-top: 10px;
   padding: 2px;
+
+  .fav {
+    width: 2rem;
+    position: absolute;
+    right: 20px;
+  }
 
   img {
     display: block;
