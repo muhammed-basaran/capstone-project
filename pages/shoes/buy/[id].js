@@ -51,6 +51,7 @@ const StyledContainer = styled.section`
   padding: 5px;
   align-items: center;
   overflow: scroll;
+  font-family: Arial, Helvetica, sans-serif;
 `;
 
 const StyledOverviewContainer = styled.section`

@@ -4,6 +4,7 @@ import shoes from "../../lib/shoes";
 import styled from "styled-components";
 import FavoriteIcon from "../../components/FavouriteIcon";
 import ImageSlider from "../../components/ImageSlider";
+import PicSlider from "../../components/NewSlider";
 
 export default function Overview() {
   const router = useRouter();
@@ -24,8 +25,7 @@ export default function Overview() {
       <StyledContainer>
         <StyledOverviewContainer>
           <FavoriteIcon className="fav" />
-          <ImageSlider img={images} />
-          <h2 className="itemName">{name}</h2>
+          <ImageSlider img={images} />c<h2 className="itemName">{name}</h2>
           <StyledDivContainer>
             <span className="releaseDate">{release}</span>
             <span className="price">{price} €</span>
@@ -56,17 +56,19 @@ const StyledContainer = styled.section`
   padding: 5px;
   align-items: center;
   overflow: scroll;
+  font-family: Arial, Helvetica, sans-serif;
 `;
 
 const StyledOverviewContainer = styled.section`
   position: relative;
-  border: 2px solid black;
   width: 80vw;
   height: auto;
   border-radius: 40px;
   margin-top: 10px;
   padding: 2px;
   overflow: hidden;
+  background-color: #dadada;
+  box-shadow: 0 5px 15px;
 
   .fav {
     width: 2rem;
@@ -99,6 +101,11 @@ const StyledDivContainer = styled.div`
   width: 90%;
   height: 20%;
   padding-bottom: 20px;
+  background-color: #7fbcc1;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 0 3px 10px;
+  margin-bottom: 20px;
 
   .releaseDate {
     font-size: 16px;
@@ -145,11 +152,15 @@ const StyledButtonContainer = styled.section`
     display: inline-block;
     margin: 10px;
     padding: 10px;
+    background-color: #7fbcc1;
+    border-radius: 20px;
   }
 
   .buy-btn {
     display: inline-block;
     padding: 10px;
     margin: 10px;
+    background-color: #7fbcc1;
+    border-radius: 20px;
   }
 `;
