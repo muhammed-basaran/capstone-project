@@ -24,12 +24,8 @@ export default function ImageSlider({ pictures }) {
           <img src={allPictures[index]} />
         </div>
         <StyledIconContainer>
-          <FaArrowCircleLeft
-            size="25px"
-            className="left"
-            onClick={handlePrev}
-          />
-          <FaArrowCircleRight
+          <StyledArrowLeft size="25px" className="left" onClick={handlePrev} />
+          <StyledArrowRight
             size="25px"
             className="right"
             onClick={handleNext}
@@ -43,13 +39,13 @@ export default function ImageSlider({ pictures }) {
 const StyledIconContainer = styled.div`
   display: flex;
   justify-content: center;
+`;
+const StyledArrowLeft = styled(FaArrowCircleLeft)`
+  margin-right: 20px;
+`;
 
-  .right {
-    margin-left: 20px;
-  }
-  .left {
-    margin-right: 20px;
-  }
+const StyledArrowRight = styled(FaArrowCircleLeft)`
+  margin-left: 20px;
 `;
 
 const StyledSlider = styled.div`
