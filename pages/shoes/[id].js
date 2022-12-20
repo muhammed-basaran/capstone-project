@@ -4,7 +4,6 @@ import shoes from "../../lib/shoes";
 import styled from "styled-components";
 import FavoriteIcon from "../../components/FavouriteIcon";
 import ImageSlider from "../../components/ImageSlider";
-import PicSlider from "../../components/NewSlider";
 
 export default function Overview() {
   const router = useRouter();
@@ -17,7 +16,7 @@ export default function Overview() {
     return <p>Page not Found</p>;
   }
 
-  const { images, name, price, release, title, description1, description2 } =
+  const { pictures, name, price, release, title, description1, description2 } =
     currentShoe;
 
   return (
@@ -25,7 +24,8 @@ export default function Overview() {
       <StyledContainer>
         <StyledOverviewContainer>
           <FavoriteIcon className="fav" />
-          <ImageSlider img={images} />c<h2 className="itemName">{name}</h2>
+          <ImageSlider pictures={pictures} id={id} />
+          <h2 className="itemName">{name}</h2>
           <StyledDivContainer>
             <span className="releaseDate">{release}</span>
             <span className="price">{price} €</span>
