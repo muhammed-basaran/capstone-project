@@ -1,23 +1,13 @@
-import Itemlist from "../../components/Itemlist";
 import Header from "../../components/Header";
-import styled from "styled-components";
+import Card from "../../components/Card";
+import Footer from "../../components/Footer";
 
-export default function Shop() {
+export default function Home() {
   return (
     <>
       <Header />
-      <StyledCardContainer>
-        <Itemlist />
-      </StyledCardContainer>
+      <Card />
+      <Footer />
     </>
   );
 }
-
-const StyledCardContainer = styled.section`
-  border: 0px solid black;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 5px;
-  align-items: center;
-`;
