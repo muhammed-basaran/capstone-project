@@ -1,24 +1,32 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import styled from "styled-components";
-import FavCard from "../../components/FavCard";
+import Link from "next/link";
+import FavoriteIcon from "./FavouriteIcon";
 
-export default function FavouritesPage({ sneakers, onClick }) {
+export default function FavItemlist({ sneakers, onClick }) {
+  const likedSneakers = sneakers.filter(
+    (sneaker) => sneaker.isFavorite === true
+  );
   return (
     <>
-      <Header />
-      <StyledHead>My Favorites</StyledHead>
-      <FavCard sneakers={sneakers} onClick={onClick} />
-      <Footer />
+      {likedSneakers.map((likedSneaker) => (
+        <StyledItemListContainer key={likedSneaker.id}>
+          <StyledButton onClick={(event) => onClick(event, likedSneaker.id)}>
+            <FavoriteIcon isFavorite={likedSneaker.isFavorite} />
+          </StyledButton>
+
+          <Link href={`/../shoes/${likedSneaker.id}`}>
+            <img src={likedSneaker.img} max-width="200px" max-height="200px" />
+            <h2 className="itemName">{likedSneaker.name}</h2>
+          </Link>
+          <StyledDivContainer>
+            <span className="releaseDate">{likedSneaker.release}</span>
+            <span className="price">{likedSneaker.price} €</span>
+          </StyledDivContainer>
+        </StyledItemListContainer>
+      ))}
     </>
   );
 }
-
-const StyledHead = styled.h1`
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 20px;
-`;
 
 const StyledItemListContainer = styled.section`
   position: relative;
@@ -63,7 +71,6 @@ const StyledButton = styled.button`
   padding: 0;
   border: none;
   background-color: #dadada;
-  cursor: pointer;
 `;
 
 const StyledDivContainer = styled.div`
@@ -91,12 +98,4 @@ const StyledDivContainer = styled.div`
     margin: 0;
     float: right;
   }
-`;
-const StyledCardContainer = styled.section`
-  border: 0px solid black;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 5px;
-  align-items: center;
 `;
