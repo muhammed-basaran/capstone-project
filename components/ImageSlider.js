@@ -44,7 +44,7 @@ const StyledArrowLeft = styled(FaArrowCircleLeft)`
   margin-right: 20px;
 `;
 
-const StyledArrowRight = styled(FaArrowCircleLeft)`
+const StyledArrowRight = styled(FaArrowCircleRight)`
   margin-left: 20px;
 `;
 
