@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export default function FavoriteIcon({ isFavorite }) {
-  console.log(isFavorite);
   return (
     <>
       {isFavorite ? (
