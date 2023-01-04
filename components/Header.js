@@ -12,7 +12,6 @@ const StyledHeader = styled.h1`
   top: 0;
   z-index: 1;
   padding: 15px;
-  background: rgb(216, 216, 216);
   background: linear-gradient(
     240deg,
     rgba(216, 216, 219, 1) 0%,

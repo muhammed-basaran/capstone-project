@@ -2,22 +2,25 @@ import styled from "styled-components";
 import Link from "next/link";
 import FavoriteIcon from "./FavouriteIcon";
 
-export default function Itemlist({ sneakers, onClick }) {
+export default function FavItemlist({ sneakers, onClick }) {
+  const likedSneakers = sneakers.filter(
+    (sneaker) => sneaker.isFavorite === true
+  );
   return (
     <>
-      {sneakers.map((sneaker) => (
-        <StyledItemListContainer key={sneaker.id}>
-          <StyledButton onClick={(event) => onClick(event, sneaker.id)}>
-            <FavoriteIcon isFavorite={sneaker.isFavorite} />
+      {likedSneakers.map((likedSneaker) => (
+        <StyledItemListContainer key={likedSneaker.id}>
+          <StyledButton onClick={(event) => onClick(event, likedSneaker.id)}>
+            <FavoriteIcon isFavorite={likedSneaker.isFavorite} />
           </StyledButton>
 
-          <Link href={`/../shoes/${sneaker.id}`}>
-            <img src={sneaker.img} max-width="200px" max-height="200px" />
-            <h2 className="itemName">{sneaker.name}</h2>
+          <Link href={`/../shoes/${likedSneaker.id}`}>
+            <img src={likedSneaker.img} max-width="200px" max-height="200px" />
+            <h2 className="itemName">{likedSneaker.name}</h2>
           </Link>
           <StyledDivContainer>
-            <span className="releaseDate">{sneaker.release}</span>
-            <span className="price">{sneaker.price} €</span>
+            <span className="releaseDate">{likedSneaker.release}</span>
+            <span className="price">{likedSneaker.price} €</span>
           </StyledDivContainer>
         </StyledItemListContainer>
       ))}

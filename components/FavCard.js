@@ -1,11 +1,11 @@
-import Itemlist from "./Itemlist";
+import FavItemlist from "./FavItemList";
 import styled from "styled-components";
 
-export default function Card({ sneakers, onClick }) {
+export default function FavCard({ sneakers, onClick }) {
   return (
     <>
       <StyledCardContainer>
-        <Itemlist sneakers={sneakers} onClick={onClick} />
+        <FavItemlist sneakers={sneakers} onClick={onClick} />
       </StyledCardContainer>
     </>
   );

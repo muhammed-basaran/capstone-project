@@ -2,9 +2,7 @@ import styled from "styled-components";
 import { AiOutlineFire, AiFillFire } from "react-icons/ai";
 import { RiHome4Line, RiHome4Fill } from "react-icons/ri";
 import Link from "next/link";
-import useLocalStorageState, {
-  LocalStorageState,
-} from "use-local-storage-state";
+import useLocalStorageState from "use-local-storage-state";
 
 export default function Footer() {
   const [isActive, setIsActive] = useLocalStorageState("is-active", true);
@@ -19,7 +17,7 @@ export default function Footer() {
             <StyledEmptyHomeIcon />
           )}
         </Link>
-        <Link href={"/../favourites"} onClick={() => setIsActive(true)}>
+        <Link href={"/../favorites"} onClick={() => setIsActive(true)}>
           {isActive == true ? <StyledFilledFire /> : <StyledEmptyFire />}
         </Link>
       </StyledNav>
@@ -39,7 +37,6 @@ const StyledNav = styled.div`
   bottom: 0;
   z-index: 1;
   padding: 0.5rem;
-  background: rgb(216, 216, 216);
   background: linear-gradient(
     240deg,
     rgba(216, 216, 219, 1) 0%,

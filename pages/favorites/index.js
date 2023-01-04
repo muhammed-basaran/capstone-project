@@ -1,29 +1,24 @@
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import styled from "styled-components";
-import Link from "next/link";
-import FavoriteIcon from "./FavouriteIcon";
+import FavCard from "../../components/FavCard";
 
-export default function Itemlist({ sneakers, onClick }) {
+export default function FavouritesPage({ sneakers, onClick }) {
   return (
     <>
-      {sneakers.map((sneaker) => (
-        <StyledItemListContainer key={sneaker.id}>
-          <StyledButton onClick={(event) => onClick(event, sneaker.id)}>
-            <FavoriteIcon isFavorite={sneaker.isFavorite} />
-          </StyledButton>
-
-          <Link href={`/../shoes/${sneaker.id}`}>
-            <img src={sneaker.img} max-width="200px" max-height="200px" />
-            <h2 className="itemName">{sneaker.name}</h2>
-          </Link>
-          <StyledDivContainer>
-            <span className="releaseDate">{sneaker.release}</span>
-            <span className="price">{sneaker.price} €</span>
-          </StyledDivContainer>
-        </StyledItemListContainer>
-      ))}
+      <Header />
+      <StyledHead>My Favorites</StyledHead>
+      <FavCard sneakers={sneakers} onClick={onClick} />
+      <Footer />
     </>
   );
 }
+
+const StyledHead = styled.h1`
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 20px;
+`;
 
 const StyledItemListContainer = styled.section`
   position: relative;
@@ -68,6 +63,7 @@ const StyledButton = styled.button`
   padding: 0;
   border: none;
   background-color: #dadada;
+  cursor: pointer;
 `;
 
 const StyledDivContainer = styled.div`
@@ -95,4 +91,12 @@ const StyledDivContainer = styled.div`
     margin: 0;
     float: right;
   }
+`;
+const StyledCardContainer = styled.section`
+  border: 0px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  align-items: center;
 `;
