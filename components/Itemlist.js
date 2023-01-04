@@ -1,21 +1,23 @@
-import shoes from "../lib/shoes";
 import styled from "styled-components";
 import Link from "next/link";
 import FavoriteIcon from "./FavouriteIcon";
 
-export default function Itemlist() {
+export default function Itemlist({ sneakers, onClick }) {
   return (
     <>
-      {shoes.map((shoe) => (
-        <StyledItemListContainer key={shoe.id}>
-          <FavoriteIcon className="fav" />
-          <Link href={`/../shoes/${shoe.id}`}>
-            <img src={shoe.img} max-width="200px" max-height="200px" />
-            <h2 className="itemName">{shoe.name}</h2>
+      {sneakers.map((sneaker) => (
+        <StyledItemListContainer key={sneaker.id}>
+          <StyledButton onClick={(event) => onClick(event, sneaker.id)}>
+            <FavoriteIcon isFavorite={sneaker.isFavorite} />
+          </StyledButton>
+
+          <Link href={`/../shoes/${sneaker.id}`}>
+            <img src={sneaker.img} max-width="200px" max-height="200px" />
+            <h2 className="itemName">{sneaker.name}</h2>
           </Link>
           <StyledDivContainer>
-            <span className="releaseDate">{shoe.release}</span>
-            <span className="price">{shoe.price} €</span>
+            <span className="releaseDate">{sneaker.release}</span>
+            <span className="price">{sneaker.price} €</span>
           </StyledDivContainer>
         </StyledItemListContainer>
       ))}
@@ -35,12 +37,6 @@ const StyledItemListContainer = styled.section`
   background-color: #dadada;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
-
-  .fav {
-    width: 2rem;
-    position: absolute;
-    right: 20px;
-  }
 
   img {
     display: block;
@@ -63,6 +59,15 @@ const StyledItemListContainer = styled.section`
   a {
     text-decoration: none;
   }
+`;
+
+const StyledButton = styled.button`
+  width: 3.2rem;
+  position: absolute;
+  right: 5px;
+  padding: 0;
+  border: none;
+  background-color: #dadada;
 `;
 
 const StyledDivContainer = styled.div`

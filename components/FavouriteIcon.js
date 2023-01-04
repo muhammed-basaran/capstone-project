@@ -1,17 +1,14 @@
 import { useState } from "react";
 
-export default function FavoriteIcon() {
-  const [isFavorite, setIsFavorite] = useState(false);
-  function handleToggle() {
-    setIsFavorite(!isFavorite);
-  }
-
+export default function FavoriteIcon({ isFavorite }) {
+  console.log(isFavorite);
   return (
-    <img
-      src={isFavorite ? "/assets/red.png" : "/assets/black.png"}
-      className="fav"
-      onClick={handleToggle}
-      aria-label="favorite"
-    />
+    <>
+      {isFavorite ? (
+        <img src={"/assets/red.png"} className="fav" aria-label="favorite" />
+      ) : (
+        <img src={"/assets/black.png"} className="fav" aria-label="favorite" />
+      )}
+    </>
   );
 }

@@ -19,7 +19,7 @@ export default function Footer() {
             <StyledEmptyHomeIcon />
           )}
         </Link>
-        <Link href={"/../favourites"} onClick={() => setIsActive(true)}>
+        <Link href={"/../favorites"} onClick={() => setIsActive(true)}>
           {isActive == true ? <StyledFilledFire /> : <StyledEmptyFire />}
         </Link>
       </StyledNav>
