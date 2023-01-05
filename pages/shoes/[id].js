@@ -26,12 +26,19 @@ export default function Overview({ sneakers, onClick }) {
     isFavorite,
   } = currentShoe;
 
+  const [counter, setCounter] = useState(100);
+
+  function handleCounter() {
+    setCounter(counter + 1);
+  }
+
   return (
     <>
       <StyledContainer>
         <StyledOverviewContainer>
           <StyledButton onClick={(event) => onClick(event, id)}>
             <FavoriteIcon className="fav" isFavorite={isFavorite} />
+            {isFavorite ? <p>{counter + 1}</p> : <p>{counter}</p>}
           </StyledButton>
           <ImageSlider pictures={pictures} id={id} />
           <h2 className="itemName">{name}</h2>
@@ -75,6 +82,12 @@ const StyledButton = styled.button`
   padding: 0;
   border: none;
   background-color: #dadada;
+
+  p {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+  }
 `;
 
 const StyledOverviewContainer = styled.section`
