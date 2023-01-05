@@ -3,6 +3,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import FavoriteIcon from "../../components/FavouriteIcon";
 import ImageSlider from "../../components/ImageSlider";
+import { useState } from "react";
 
 export default function Overview({ sneakers, onClick }) {
   const router = useRouter();
