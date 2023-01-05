@@ -18,4 +18,5 @@ const StyledCardContainer = styled.section`
   gap: 10px;
   padding: 5px;
   align-items: center;
+  margin-bottom: 70px;
 `;
