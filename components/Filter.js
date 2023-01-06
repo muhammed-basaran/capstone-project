@@ -11,59 +11,78 @@ import { GiConverseShoe } from "react-icons/gi";
 import { useState } from "react";
 
 export default function Filter() {
-  const [selectedIcon, setSelectedIcon] = useState(null);
+  const [selectedIcon, setSelectedIcon] = useState();
+  const [isActive, setIsActive] = useState(false);
+
+  function handleToggleIcon() {
+    setIsActive(!isActive);
+  }
 
   return (
     <>
       <StyledContentContainer>
         <StyledIconContainer>
-          <StyledBrandCircle>
+          <StyledBrandCircle onClick={() => handleToggleIcon()}>
             <StyledBrandNike
               size="70px"
               onClick={() => setSelectedIcon("nike")}
-              color={selectedIcon === "nike" ? "#7fbcc1" : ""}
+              color={isActive ? (selectedIcon === "nike" ? "#7fbcc1" : "") : ""}
             />
           </StyledBrandCircle>
-          <StyledBrandCircle>
+          <StyledBrandCircle onClick={() => handleToggleIcon()}>
             <StyledBrandAdidas
               size="60px"
               onClick={() => setSelectedIcon("adidas")}
-              color={selectedIcon === "adidas" ? "#7fbcc1" : ""}
+              color={
+                isActive ? (selectedIcon === "adidas" ? "#7fbcc1" : "") : ""
+              }
             />
           </StyledBrandCircle>
-          <StyledBrandCircle>
+          <StyledBrandCircle onClick={() => handleToggleIcon()}>
             <StyledBrandReebok
               size="70px"
               onClick={() => setSelectedIcon("reebok")}
-              color={selectedIcon === "reebok" ? "#7fbcc1" : ""}
+              color={
+                isActive ? (selectedIcon === "reebok" ? "#7fbcc1" : "") : ""
+              }
             />
           </StyledBrandCircle>
-          <StyledBrandCircle>
+          <StyledBrandCircle onClick={() => handleToggleIcon()}>
             <StyledBrandJordan
               size="60px"
               onClick={() => setSelectedIcon("air-jordan")}
-              color={selectedIcon === "air-jordan" ? "#7fbcc1" : ""}
+              color={
+                isActive ? (selectedIcon === "air-jordan" ? "#7fbcc1" : "") : ""
+              }
             />
           </StyledBrandCircle>
-          <StyledBrandCircle>
+          <StyledBrandCircle onClick={() => handleToggleIcon()}>
             <StyledBrandConverse
               size="70px"
               onClick={() => setSelectedIcon("converse")}
-              color={selectedIcon === "converse" ? "#7fbcc1" : ""}
+              color={
+                isActive ? (selectedIcon === "converse" ? "#7fbcc1" : "") : ""
+              }
             />
           </StyledBrandCircle>
-          <StyledBrandCircle>
+          <StyledBrandCircle onClick={() => handleToggleIcon()}>
             <StyledBrandPuma
               size="70px"
               onClick={() => setSelectedIcon("puma")}
-              color={selectedIcon === "puma" ? "#7fbcc1" : ""}
+              color={isActive ? (selectedIcon === "puma" ? "#7fbcc1" : "") : ""}
             />
           </StyledBrandCircle>
-          <StyledBrandCircle>
+          <StyledBrandCircle onClick={() => handleToggleIcon()}>
             <StyledBrandNewBalance
               size="70px"
               onClick={() => setSelectedIcon("new-balance")}
-              color={selectedIcon === "new-balance" ? "#7fbcc1" : ""}
+              color={
+                isActive
+                  ? selectedIcon === "new-balance"
+                    ? "#7fbcc1"
+                    : ""
+                  : ""
+              }
             />
           </StyledBrandCircle>
         </StyledIconContainer>
