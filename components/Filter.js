@@ -8,33 +8,64 @@ import {
   SiNewbalance,
 } from "react-icons/si";
 import { GiConverseShoe } from "react-icons/gi";
+import { useState } from "react";
 
 export default function Filter() {
+  const [selectedIcon, setSelectedIcon] = useState(null);
+
   return (
     <>
       <StyledContentContainer>
         <StyledIconContainer>
-          <li>
-            <StyledBrandNike size="70px" />
-          </li>
-          <li>
-            <StyledBrandAdidas size="60px" />
-          </li>
-          <li>
-            <StyledBrandReebok size="70px" />
-          </li>
-          <li>
-            <StyledBrandJordan size="60px" />
-          </li>
-          <li>
-            <StyledBrandConverse size="70px" />
-          </li>
-          <li>
-            <StyledBrandPuma size="70px" />
-          </li>
-          <li>
-            <StyledBrandNewBalance size="70px" />
-          </li>
+          <StyledBrandCircle>
+            <StyledBrandNike
+              size="70px"
+              onClick={() => setSelectedIcon("nike")}
+              color={selectedIcon === "nike" ? "#7fbcc1" : ""}
+            />
+          </StyledBrandCircle>
+          <StyledBrandCircle>
+            <StyledBrandAdidas
+              size="60px"
+              onClick={() => setSelectedIcon("adidas")}
+              color={selectedIcon === "adidas" ? "#7fbcc1" : ""}
+            />
+          </StyledBrandCircle>
+          <StyledBrandCircle>
+            <StyledBrandReebok
+              size="70px"
+              onClick={() => setSelectedIcon("reebok")}
+              color={selectedIcon === "reebok" ? "#7fbcc1" : ""}
+            />
+          </StyledBrandCircle>
+          <StyledBrandCircle>
+            <StyledBrandJordan
+              size="60px"
+              onClick={() => setSelectedIcon("air-jordan")}
+              color={selectedIcon === "air-jordan" ? "#7fbcc1" : ""}
+            />
+          </StyledBrandCircle>
+          <StyledBrandCircle>
+            <StyledBrandConverse
+              size="70px"
+              onClick={() => setSelectedIcon("converse")}
+              color={selectedIcon === "converse" ? "#7fbcc1" : ""}
+            />
+          </StyledBrandCircle>
+          <StyledBrandCircle>
+            <StyledBrandPuma
+              size="70px"
+              onClick={() => setSelectedIcon("puma")}
+              color={selectedIcon === "puma" ? "#7fbcc1" : ""}
+            />
+          </StyledBrandCircle>
+          <StyledBrandCircle>
+            <StyledBrandNewBalance
+              size="70px"
+              onClick={() => setSelectedIcon("new-balance")}
+              color={selectedIcon === "new-balance" ? "#7fbcc1" : ""}
+            />
+          </StyledBrandCircle>
         </StyledIconContainer>
       </StyledContentContainer>
     </>
@@ -44,7 +75,7 @@ export default function Filter() {
 const StyledContentContainer = styled.div`
   display: grid;
   overflow-x: scroll;
-  margin: 10px 10px 20px 10px;
+  margin: 10px 20px 20px -25px;
   padding-bottom: 10px;
   border-bottom: 2px solid gray;
 `;
@@ -55,14 +86,18 @@ const StyledIconContainer = styled.ul`
   justify-content: space-between;
   list-style: none;
   gap: 20px;
+`;
 
-  li {
-    border: 3px solid black;
-    border-radius: 50%;
-    width: 4.5rem;
-    height: 4.5rem;
-    text-align: center;
-    margin-right: auto;
+const StyledBrandCircle = styled.li`
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  text-align: center;
+  cursor: pointer;
+
+  :active {
+    background-color: #7fbcc1;
   }
 `;
 
