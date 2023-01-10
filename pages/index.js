@@ -3,12 +3,22 @@ import Card from "../components/Card";
 import Footer from "../components/Footer";
 import Filter from "../components/Filter";
 
-export default function Home({ sneakers, onClick }) {
+export default function Home({
+  sneakers,
+  onClick,
+  selectedIcon,
+  setSelectedIcon,
+}) {
   return (
     <>
       <Header />
-      <Filter />
-      <Card sneakers={sneakers} onClick={onClick} />
+      <Filter selectedIcon={selectedIcon} setSelectedIcon={setSelectedIcon} />
+      <Card
+        sneakers={sneakers}
+        onClick={onClick}
+        selectedIcon={selectedIcon}
+        setSelectedIcon={setSelectedIcon}
+      />
       <Footer sneakers={sneakers} onClick={onClick} />
     </>
   );

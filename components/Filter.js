@@ -8,81 +8,67 @@ import {
   SiNewbalance,
 } from "react-icons/si";
 import { GiConverseShoe } from "react-icons/gi";
-import { useState } from "react";
 
-export default function Filter() {
-  const [selectedIcon, setSelectedIcon] = useState();
-  const [isActive, setIsActive] = useState(false);
-
-  function handleToggleIcon() {
-    setIsActive(!isActive);
-  }
-
+export default function Filter({ selectedIcon, setSelectedIcon }) {
   return (
     <>
       <StyledContentContainer>
         <StyledIconContainer>
-          <StyledBrandCircle onClick={() => handleToggleIcon()}>
+          <StyledBrandCircle>
+            <StyledBrandAll
+              onClick={() => setSelectedIcon("all")}
+              className={selectedIcon === "all" ? "clicked" : ""}
+            >
+              All Sneakers
+            </StyledBrandAll>
+          </StyledBrandCircle>
+          <StyledBrandCircle>
             <StyledBrandNike
               size="70px"
               onClick={() => setSelectedIcon("nike")}
-              color={isActive ? (selectedIcon === "nike" ? "#7fbcc1" : "") : ""}
+              color={selectedIcon === "nike" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
-          <StyledBrandCircle onClick={() => handleToggleIcon()}>
+          <StyledBrandCircle>
             <StyledBrandAdidas
               size="60px"
               onClick={() => setSelectedIcon("adidas")}
-              color={
-                isActive ? (selectedIcon === "adidas" ? "#7fbcc1" : "") : ""
-              }
+              color={selectedIcon === "adidas" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
-          <StyledBrandCircle onClick={() => handleToggleIcon()}>
+          <StyledBrandCircle>
             <StyledBrandReebok
               size="70px"
               onClick={() => setSelectedIcon("reebok")}
-              color={
-                isActive ? (selectedIcon === "reebok" ? "#7fbcc1" : "") : ""
-              }
+              color={selectedIcon === "reebok" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
-          <StyledBrandCircle onClick={() => handleToggleIcon()}>
+          <StyledBrandCircle>
             <StyledBrandJordan
               size="60px"
-              onClick={() => setSelectedIcon("air-jordan")}
-              color={
-                isActive ? (selectedIcon === "air-jordan" ? "#7fbcc1" : "") : ""
-              }
+              onClick={() => setSelectedIcon("air jordan")}
+              color={selectedIcon === "air jordan" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
-          <StyledBrandCircle onClick={() => handleToggleIcon()}>
+          <StyledBrandCircle>
             <StyledBrandConverse
               size="70px"
               onClick={() => setSelectedIcon("converse")}
-              color={
-                isActive ? (selectedIcon === "converse" ? "#7fbcc1" : "") : ""
-              }
+              color={selectedIcon === "converse" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
-          <StyledBrandCircle onClick={() => handleToggleIcon()}>
+          <StyledBrandCircle>
             <StyledBrandPuma
               size="70px"
               onClick={() => setSelectedIcon("puma")}
-              color={isActive ? (selectedIcon === "puma" ? "#7fbcc1" : "") : ""}
+              color={selectedIcon === "puma" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
-          <StyledBrandCircle onClick={() => handleToggleIcon()}>
+          <StyledBrandCircle>
             <StyledBrandNewBalance
               size="70px"
               onClick={() => setSelectedIcon("new-balance")}
-              color={
-                isActive
-                  ? selectedIcon === "new-balance"
-                    ? "#7fbcc1"
-                    : ""
-                  : ""
-              }
+              color={selectedIcon === "new-balance" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
         </StyledIconContainer>
@@ -94,7 +80,7 @@ export default function Filter() {
 const StyledContentContainer = styled.div`
   display: grid;
   overflow-x: scroll;
-  margin: 10px 20px 20px -25px;
+  margin: 90px 20px 20px -25px;
   padding-bottom: 10px;
   border-bottom: 2px solid gray;
 `;
@@ -115,9 +101,14 @@ const StyledBrandCircle = styled.li`
   text-align: center;
   cursor: pointer;
 
-  :active {
-    background-color: #7fbcc1;
+  .clicked {
+    color: #7fbcc1;
   }
+`;
+
+const StyledBrandAll = styled.p`
+  font-size: 13px;
+  font-weight: bold;
 `;
 
 const StyledBrandNike = styled(SiNike)`

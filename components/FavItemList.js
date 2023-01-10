@@ -8,6 +8,7 @@ export default function FavItemlist({ sneakers, onClick }) {
   );
   return (
     <>
+      <h1>My Favorites</h1>
       {likedSneakers.map((likedSneaker) => (
         <StyledItemListContainer key={likedSneaker.id}>
           <StyledButton onClick={(event) => onClick(event, likedSneaker.id)}>

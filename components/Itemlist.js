@@ -2,27 +2,60 @@ import styled from "styled-components";
 import Link from "next/link";
 import FavoriteIcon from "./FavouriteIcon";
 
-export default function Itemlist({ sneakers, onClick }) {
-  return (
-    <>
-      {sneakers.map((sneaker) => (
-        <StyledItemListContainer key={sneaker.id}>
-          <StyledButton onClick={(event) => onClick(event, sneaker.id)}>
-            <FavoriteIcon isFavorite={sneaker.isFavorite} />
-          </StyledButton>
-
-          <Link href={`/../shoes/${sneaker.id}`}>
-            <img src={sneaker.img} max-width="200px" max-height="200px" />
-            <h2 className="itemName">{sneaker.name}</h2>
-          </Link>
-          <StyledDivContainer>
-            <span className="releaseDate">{sneaker.release}</span>
-            <span className="price">{sneaker.price} €</span>
-          </StyledDivContainer>
-        </StyledItemListContainer>
-      ))}
-    </>
+export default function Itemlist({
+  sneakers,
+  onClick,
+  selectedIcon,
+  setSelectedIcon,
+}) {
+  const filteredSneakers = sneakers.filter(
+    (sneaker) => sneaker.producer.toLowerCase() === selectedIcon
   );
+  if (selectedIcon === "all") {
+    return (
+      <>
+        {sneakers.map((sneaker) => (
+          <StyledItemListContainer key={sneaker.id}>
+            <StyledButton onClick={(event) => onClick(event, sneaker.id)}>
+              <FavoriteIcon isFavorite={sneaker.isFavorite} />
+            </StyledButton>
+
+            <Link href={`/../shoes/${sneaker.id}`}>
+              <img src={sneaker.img} max-width="200px" max-height="200px" />
+              <h2 className="itemName">{sneaker.name}</h2>
+            </Link>
+            <StyledDivContainer>
+              <span className="releaseDate">{sneaker.release}</span>
+              <span className="price">{sneaker.price} €</span>
+            </StyledDivContainer>
+          </StyledItemListContainer>
+        ))}
+      </>
+    );
+  } else if (filteredSneakers.length === 0) {
+    return <p>no result</p>;
+  } else {
+    return (
+      <>
+        {filteredSneakers.map((sneaker) => (
+          <StyledItemListContainer key={sneaker.id}>
+            <StyledButton onClick={(event) => onClick(event, sneaker.id)}>
+              <FavoriteIcon isFavorite={sneaker.isFavorite} />
+            </StyledButton>
+
+            <Link href={`/../shoes/${sneaker.id}`}>
+              <img src={sneaker.img} max-width="200px" max-height="200px" />
+              <h2 className="itemName">{sneaker.name}</h2>
+            </Link>
+            <StyledDivContainer>
+              <span className="releaseDate">{sneaker.release}</span>
+              <span className="price">{sneaker.price} €</span>
+            </StyledDivContainer>
+          </StyledItemListContainer>
+        ))}
+      </>
+    );
+  }
 }
 
 const StyledItemListContainer = styled.section`

@@ -4,6 +4,7 @@ import shoes from "../lib/shoes";
 
 function MyApp({ Component, pageProps }) {
   const [sneakers, setSneakers] = useState(shoes);
+  const [selectedIcon, setSelectedIcon] = useState();
 
   function handleToggleLike(event, id) {
     event.preventDefault();
@@ -25,6 +26,8 @@ function MyApp({ Component, pageProps }) {
         {...pageProps}
         sneakers={sneakers}
         onClick={handleToggleLike}
+        selectedIcon={selectedIcon}
+        setSelectedIcon={setSelectedIcon}
       />
     </>
   );

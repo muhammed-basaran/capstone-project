@@ -1,11 +1,21 @@
 import Itemlist from "./Itemlist";
 import styled from "styled-components";
 
-export default function Card({ sneakers, onClick }) {
+export default function Card({
+  sneakers,
+  onClick,
+  selectedIcon,
+  setSelectedIcon,
+}) {
   return (
     <>
       <StyledCardContainer>
-        <Itemlist sneakers={sneakers} onClick={onClick} />
+        <Itemlist
+          sneakers={sneakers}
+          onClick={onClick}
+          selectedIcon={selectedIcon}
+          setSelectedIcon={setSelectedIcon}
+        />
       </StyledCardContainer>
     </>
   );
