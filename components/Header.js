@@ -7,11 +7,14 @@ export default function Header() {
 const StyledHeader = styled.h1`
   text-align: center;
   border-radius: 10px;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  height: auto;
   font-family: Arial, Helvetica, sans-serif;
-  top: 0;
+  top: -25px;
   z-index: 1;
-  padding: 15px;
+  padding: 1.5rem;
+
   background: linear-gradient(
     240deg,
     rgba(216, 216, 219, 1) 0%,
