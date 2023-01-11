@@ -9,14 +9,14 @@ import {
 } from "react-icons/si";
 import { GiConverseShoe } from "react-icons/gi";
 
-export default function Filter({ selectedIcon, setSelectedIcon }) {
+export default function Filter({ selectedIcon, handleSelectedIcon }) {
   return (
     <>
       <StyledContentContainer>
         <StyledIconContainer>
           <StyledBrandCircle>
             <StyledBrandAll
-              onClick={() => setSelectedIcon("all")}
+              onClick={() => handleSelectedIcon("all")}
               className={selectedIcon === "all" ? "clicked" : ""}
             >
               All Sneakers
@@ -25,49 +25,49 @@ export default function Filter({ selectedIcon, setSelectedIcon }) {
           <StyledBrandCircle>
             <StyledBrandNike
               size="70px"
-              onClick={() => setSelectedIcon("nike")}
+              onClick={() => handleSelectedIcon("nike")}
               color={selectedIcon === "nike" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
           <StyledBrandCircle>
             <StyledBrandAdidas
               size="60px"
-              onClick={() => setSelectedIcon("adidas")}
+              onClick={() => handleSelectedIcon("adidas")}
               color={selectedIcon === "adidas" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
           <StyledBrandCircle>
             <StyledBrandReebok
               size="70px"
-              onClick={() => setSelectedIcon("reebok")}
+              onClick={() => handleSelectedIcon("reebok")}
               color={selectedIcon === "reebok" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
           <StyledBrandCircle>
             <StyledBrandJordan
               size="60px"
-              onClick={() => setSelectedIcon("air jordan")}
+              onClick={() => handleSelectedIcon("air jordan")}
               color={selectedIcon === "air jordan" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
           <StyledBrandCircle>
             <StyledBrandConverse
               size="70px"
-              onClick={() => setSelectedIcon("converse")}
+              onClick={() => handleSelectedIcon("converse")}
               color={selectedIcon === "converse" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
           <StyledBrandCircle>
             <StyledBrandPuma
               size="70px"
-              onClick={() => setSelectedIcon("puma")}
+              onClick={() => handleSelectedIcon("puma")}
               color={selectedIcon === "puma" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>
           <StyledBrandCircle>
             <StyledBrandNewBalance
               size="70px"
-              onClick={() => setSelectedIcon("new-balance")}
+              onClick={() => handleSelectedIcon("new-balance")}
               color={selectedIcon === "new-balance" ? "#7fbcc1" : ""}
             />
           </StyledBrandCircle>

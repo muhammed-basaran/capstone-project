@@ -7,17 +7,20 @@ export default function Home({
   sneakers,
   onClick,
   selectedIcon,
-  setSelectedIcon,
+  handleSelectedIcon,
 }) {
   return (
     <>
       <Header />
-      <Filter selectedIcon={selectedIcon} setSelectedIcon={setSelectedIcon} />
+      <Filter
+        selectedIcon={selectedIcon}
+        handleSelectedIcon={handleSelectedIcon}
+      />
       <Card
         sneakers={sneakers}
         onClick={onClick}
         selectedIcon={selectedIcon}
-        setSelectedIcon={setSelectedIcon}
+        handleSelectedIcon={handleSelectedIcon}
       />
       <Footer />
     </>

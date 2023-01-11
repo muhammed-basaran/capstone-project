@@ -12,11 +12,10 @@ export default function FavCard({ sneakers, onClick }) {
 }
 
 const StyledCardContainer = styled.section`
-  border: 0px solid black;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 5px;
+  gap: 1.5rem;
+  padding: 1rem;
   align-items: center;
-  margin-bottom: 90px;
+  margin-bottom: 5rem;
 `;
