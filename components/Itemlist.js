@@ -2,12 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import FavoriteIcon from "./FavouriteIcon";
 
-export default function Itemlist({
-  sneakers,
-  onClick,
-  selectedIcon,
-  setSelectedIcon,
-}) {
+export default function Itemlist({ sneakers, onClick, selectedIcon }) {
   const filteredSneakers = sneakers.filter(
     (sneaker) => sneaker.producer.toLowerCase() === selectedIcon
   );
