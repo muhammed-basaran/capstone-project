@@ -22,7 +22,7 @@ export default function Home({
         selectedIcon={selectedIcon}
         handleSelectedIcon={handleSelectedIcon}
       />
-      <Footer />
+      <Footer sneakers={sneakers} onClick={onClick} />
     </>
   );
 }

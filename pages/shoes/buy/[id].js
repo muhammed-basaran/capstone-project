@@ -3,19 +3,18 @@ import Link from "next/link";
 import shoes from "../../../lib/shoes";
 import styled from "styled-components";
 
-export default function Buy() {
+export default function Buy({ sneakers }) {
   const router = useRouter();
 
   const { id } = router.query;
 
-  const currentBuyPage = shoes.find((shoe) => shoe.id === id);
+  const currentBuyPage = sneakers.find((sneaker) => sneaker.id === id);
 
   if (!currentBuyPage) {
     return <p>Page not Found</p>;
   }
 
   const { shops } = currentBuyPage;
-  console.log(shops);
 
   return (
     <>
