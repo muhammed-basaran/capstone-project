@@ -33,7 +33,7 @@ export default function Itemlist({
       </>
     );
   } else if (filteredSneakers.length === 0) {
-    return <p>no result</p>;
+    return <p>no results</p>;
   } else {
     return (
       <>
