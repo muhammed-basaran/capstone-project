@@ -1,5 +1,5 @@
 import GlobalStyles from "../components/GlobalStyles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import shoes from "../lib/shoes";
 
 function MyApp({ Component, pageProps }) {

@@ -5,7 +5,7 @@ export default function Card({
   sneakers,
   onClick,
   selectedIcon,
-  setSelectedIcon,
+  handleSelectedIcon,
 }) {
   return (
     <>
