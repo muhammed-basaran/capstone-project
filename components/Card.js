@@ -5,7 +5,7 @@ export default function Card({
   sneakers,
   onClick,
   selectedIcon,
-  setSelectedIcon,
+  handleSelectedIcon,
 }) {
   return (
     <>
@@ -14,7 +14,7 @@ export default function Card({
           sneakers={sneakers}
           onClick={onClick}
           selectedIcon={selectedIcon}
-          setSelectedIcon={setSelectedIcon}
+          handleSelectedIcon={handleSelectedIcon}
         />
       </StyledCardContainer>
     </>

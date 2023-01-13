@@ -1,10 +1,23 @@
 import GlobalStyles from "../components/GlobalStyles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import shoes from "../lib/shoes";
 
 function MyApp({ Component, pageProps }) {
-  const [sneakers, setSneakers] = useState(shoes);
+  const [sneakers, setSneakers] = useState([]);
   const [selectedIcon, setSelectedIcon] = useState("all");
+
+  async function getShoe() {
+    try {
+      const response = await fetch("/api/sneakers");
+      const sneakersList = await response.json();
+      setSneakers(sneakersList);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+    getShoe();
+  }, []);
 
   function handleSelectedIcon(icon) {
     setSelectedIcon(icon);

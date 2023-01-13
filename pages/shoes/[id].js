@@ -53,11 +53,13 @@ export default function Overview({ sneakers, onClick }) {
             <p>{description2}</p>
           </StyledInfoContainer>
           <StyledButtonContainer>
-            <Link href="/shoes">
+            <Link href="/">
               <button className="back-btn">BACK</button>
             </Link>
             <Link href={`/shoes/buy/${id}`}>
-              <button className="buy-btn">FORWARD </button>
+              <button className="buy-btn" sneakers={sneakers}>
+                FORWARD{" "}
+              </button>
             </Link>
           </StyledButtonContainer>
         </StyledOverviewContainer>
