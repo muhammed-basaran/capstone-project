@@ -34,7 +34,7 @@ export default function Buy({ sneakers }) {
           ))}
           <StyledButtonContainer>
             <Link href={`/shoes/${id}`}>
-              <button className="back-btn">BACK</button>
+              <button className="back-button">BACK</button>
             </Link>
           </StyledButtonContainer>
         </StyledOverviewContainer>
@@ -99,7 +99,7 @@ const StyledButtonContainer = styled.section`
   display: flex;
   justify-content: center;
 
-  .back-btn {
+  .back-button {
     display: inline-block;
     margin: 10px;
     padding: 10px;
