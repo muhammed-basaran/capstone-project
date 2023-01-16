@@ -85,7 +85,7 @@ const StyledButton = styled.button`
   top: 15px;
   padding: 0;
   border: none;
-  background-color: white;
+  background-color: transparent;
 
   p {
     position: absolute;
