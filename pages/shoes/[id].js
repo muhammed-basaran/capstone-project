@@ -54,10 +54,10 @@ export default function Overview({ sneakers, onClick }) {
           </StyledInfoContainer>
           <StyledButtonContainer>
             <Link href="/">
-              <button className="back-btn">BACK</button>
+              <button className="back-button">BACK</button>
             </Link>
             <Link href={`/shoes/buy/${id}`}>
-              <button className="buy-btn" sneakers={sneakers}>
+              <button className="buy-button" sneakers={sneakers}>
                 FORWARD{" "}
               </button>
             </Link>
@@ -81,15 +81,16 @@ const StyledContainer = styled.section`
 const StyledButton = styled.button`
   width: 2rem;
   position: absolute;
-  right: -5px;
+  right: 15px;
+  top: 15px;
   padding: 0;
   border: none;
-  background-color: #dadada;
+  background-color: white;
 
   p {
     position: absolute;
-    top: 30px;
-    right: 25px;
+    top: 20px;
+    right: 7px;
   }
 `;
 
@@ -182,7 +183,7 @@ const StyledButtonContainer = styled.section`
   display: flex;
   justify-content: center;
 
-  .back-btn {
+  .back-button {
     display: inline-block;
     margin: 10px;
     padding: 10px;
@@ -190,7 +191,7 @@ const StyledButtonContainer = styled.section`
     border-radius: 20px;
   }
 
-  .buy-btn {
+  .buy-button {
     display: inline-block;
     padding: 10px;
     margin: 10px;
