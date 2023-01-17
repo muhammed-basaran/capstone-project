@@ -4,6 +4,7 @@ import styled from "styled-components";
 import FavoriteIcon from "../../components/FavouriteIcon";
 import ImageSlider from "../../components/ImageSlider";
 import { useState } from "react";
+import Header from "../../components/Header";
 
 export default function Overview({ sneakers, onClick }) {
   const router = useRouter();
@@ -35,6 +36,7 @@ export default function Overview({ sneakers, onClick }) {
 
   return (
     <>
+      <Header />
       <StyledContainer>
         <StyledOverviewContainer>
           <StyledButton onClick={(event) => onClick(event, id)}>
@@ -54,11 +56,11 @@ export default function Overview({ sneakers, onClick }) {
           </StyledInfoContainer>
           <StyledButtonContainer>
             <Link href="/">
-              <button className="back-btn">BACK</button>
+              <button className="back-button">BACK</button>
             </Link>
             <Link href={`/shoes/buy/${id}`}>
-              <button className="buy-btn" sneakers={sneakers}>
-                FORWARD{" "}
+              <button className="buy-button" sneakers={sneakers}>
+                FORWARD
               </button>
             </Link>
           </StyledButtonContainer>
@@ -69,6 +71,7 @@ export default function Overview({ sneakers, onClick }) {
 }
 
 const StyledContainer = styled.section`
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -76,33 +79,36 @@ const StyledContainer = styled.section`
   align-items: center;
   overflow: scroll;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
 `;
 
 const StyledButton = styled.button`
   width: 2rem;
   position: absolute;
-  right: -5px;
+  right: 15px;
+  top: 15px;
   padding: 0;
   border: none;
-  background-color: #dadada;
+  background-color: transparent;
 
   p {
     position: absolute;
-    top: 30px;
-    right: 25px;
+    top: 20px;
+    right: 7px;
   }
 `;
 
 const StyledOverviewContainer = styled.section`
   position: relative;
   width: 80vw;
-  height: auto;
+  height: 80vh;
   border-radius: 40px;
   margin-top: 10px;
   padding: 2px;
-  overflow: hidden;
+  overflow: scroll;
   background-color: #dadada;
   box-shadow: 0 5px 15px;
+  margin-bottom: 20px;
 
   .fav {
     width: 2rem;
@@ -133,7 +139,7 @@ const StyledDivContainer = styled.div`
   padding: 15px;
   margin: auto;
   width: 90%;
-  height: 20%;
+  height: 10%;
   padding-bottom: 20px;
   background-color: #7fbcc1;
   border-radius: 20px;
@@ -182,7 +188,7 @@ const StyledButtonContainer = styled.section`
   display: flex;
   justify-content: center;
 
-  .back-btn {
+  .back-button {
     display: inline-block;
     margin: 10px;
     padding: 10px;
@@ -190,7 +196,7 @@ const StyledButtonContainer = styled.section`
     border-radius: 20px;
   }
 
-  .buy-btn {
+  .buy-button {
     display: inline-block;
     padding: 10px;
     margin: 10px;
