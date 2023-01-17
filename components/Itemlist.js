@@ -73,8 +73,9 @@ const StyledItemListContainer = styled.section`
     padding: 2px;
     padding-top: 10px;
     margin-top: 10px;
-    width: 60%;
+    width: 80%;
     height: auto;
+    border-radius: 20px;
   }
 
   h2 {
@@ -92,10 +93,10 @@ const StyledItemListContainer = styled.section`
 const StyledButton = styled.button`
   width: 3.2rem;
   position: absolute;
-  right: 5px;
+  right: 0px;
   padding: 0;
   border: none;
-  background-color: #dadada;
+  background-color: transparent;
 `;
 
 const StyledDivContainer = styled.div`

@@ -4,7 +4,7 @@ import { GiRunningShoe } from "react-icons/gi";
 export default function Header() {
   return (
     <StyledHeader>
-      <GiRunningShoe size={40} /> SNEAK PICK
+      <GiRunningShoe color={"#dadada"} size={40} /> SNEAK PICK
       <StyledSneakerIcon size={40} />
     </StyledHeader>
   );
