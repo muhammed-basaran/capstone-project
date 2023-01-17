@@ -24,9 +24,9 @@ export default function ImageSlider({ pictures }) {
           <img src={allPictures[index]} />
         </div>
         <StyledIconContainer>
-          <StyledArrowLeft size="25px" className="left" onClick={handlePrev} />
+          <StyledArrowLeft size="30px" className="left" onClick={handlePrev} />
           <StyledArrowRight
-            size="25px"
+            size="30px"
             className="right"
             onClick={handleNext}
           />
@@ -58,7 +58,8 @@ const StyledSlider = styled.div`
   }
 
   .slide img {
-    width: 300px;
+    width: 260px;
     height: 220px;
+    border-radius: 20px;
   }
 `;

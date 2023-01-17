@@ -100,10 +100,10 @@ const StyledButton = styled.button`
 `;
 
 const StyledDivContainer = styled.div`
-  padding: 15px;
+  padding: 20px;
   margin: auto;
   width: 90%;
-  height: 20%;
+  height: 10%;
   padding-bottom: 20px;
   background-color: #7fbcc1;
   width: 100%;

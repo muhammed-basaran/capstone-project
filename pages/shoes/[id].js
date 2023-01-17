@@ -136,11 +136,9 @@ const StyledOverviewContainer = styled.section`
 `;
 
 const StyledDivContainer = styled.div`
-  padding: 15px;
+  padding: 20px;
   margin: auto;
-  width: 90%;
   height: 10%;
-  padding-bottom: 20px;
   background-color: #7fbcc1;
   border-radius: 20px;
   width: 100%;
