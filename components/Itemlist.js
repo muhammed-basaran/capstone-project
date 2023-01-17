@@ -84,6 +84,7 @@ const StyledItemListContainer = styled.section`
     text-align: center;
     color: black;
     text-decoration: none;
+    padding: 0 10px 0 10px;
   }
   a {
     text-decoration: none;
