@@ -21,9 +21,9 @@ export default function Buy({ sneakers }) {
       <Header />
       <StyledContainer>
         <StyledOverviewContainer>
-          <h1>Retailer</h1>
+          <h1>Retailer Page</h1>
 
-          <p>Click on the name for visiting the retailers Homepage:</p>
+          <p>Click for visiting the retailers Homepage:</p>
           {shops.map((shop) => (
             <>
               <StyledLinkContainer>
@@ -68,7 +68,7 @@ const StyledOverviewContainer = styled.section`
   margin-bottom: 20px;
 
   h1 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
     color: black;
@@ -78,6 +78,7 @@ const StyledOverviewContainer = styled.section`
 
   p {
     text-align: center;
+    font-size: 17px;
   }
 `;
 
@@ -85,8 +86,10 @@ const StyledLinkContainer = styled.section`
   border: 1px solid black;
   margin: 10px;
   background-color: #7fbcc1;
+  border-radius: 20px;
+
   h3 {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
     color: black;
