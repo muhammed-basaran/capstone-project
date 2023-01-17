@@ -79,6 +79,7 @@ const StyledContainer = styled.section`
   align-items: center;
   overflow: scroll;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
 `;
 
 const StyledButton = styled.button`
@@ -100,13 +101,14 @@ const StyledButton = styled.button`
 const StyledOverviewContainer = styled.section`
   position: relative;
   width: 80vw;
-  height: auto;
+  height: 80vh;
   border-radius: 40px;
   margin-top: 10px;
   padding: 2px;
-  overflow: hidden;
+  overflow: scroll;
   background-color: #dadada;
   box-shadow: 0 5px 15px;
+  margin-bottom: 20px;
 
   .fav {
     width: 2rem;
@@ -137,7 +139,7 @@ const StyledDivContainer = styled.div`
   padding: 15px;
   margin: auto;
   width: 90%;
-  height: 20%;
+  height: 10%;
   padding-bottom: 20px;
   background-color: #7fbcc1;
   border-radius: 20px;

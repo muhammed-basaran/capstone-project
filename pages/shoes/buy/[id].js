@@ -65,6 +65,7 @@ const StyledOverviewContainer = styled.section`
   overflow: hidden;
   background-color: #dadada;
   box-shadow: 0 5px 15px;
+  margin-bottom: 20px;
 
   h1 {
     font-size: 30px;
