@@ -1,3 +1,3 @@
-export default function Retailer({ sneakers }) {
+export default function Retailer() {
   return <></>;
 }

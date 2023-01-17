@@ -4,6 +4,7 @@ import styled from "styled-components";
 import FavoriteIcon from "../../components/FavouriteIcon";
 import ImageSlider from "../../components/ImageSlider";
 import { useState } from "react";
+import Header from "../../components/Header";
 
 export default function Overview({ sneakers, onClick }) {
   const router = useRouter();
@@ -35,6 +36,7 @@ export default function Overview({ sneakers, onClick }) {
 
   return (
     <>
+      <Header />
       <StyledContainer>
         <StyledOverviewContainer>
           <StyledButton onClick={(event) => onClick(event, id)}>
@@ -58,7 +60,7 @@ export default function Overview({ sneakers, onClick }) {
             </Link>
             <Link href={`/shoes/buy/${id}`}>
               <button className="buy-button" sneakers={sneakers}>
-                FORWARD{" "}
+                FORWARD
               </button>
             </Link>
           </StyledButtonContainer>
@@ -69,6 +71,7 @@ export default function Overview({ sneakers, onClick }) {
 }
 
 const StyledContainer = styled.section`
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   gap: 10px;

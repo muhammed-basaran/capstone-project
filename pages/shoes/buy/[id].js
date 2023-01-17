@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import shoes from "../../../lib/shoes";
 import styled from "styled-components";
+import Header from "../../../components/Header";
 
 export default function Buy({ sneakers }) {
   const router = useRouter();
@@ -18,6 +18,7 @@ export default function Buy({ sneakers }) {
 
   return (
     <>
+      <Header />
       <StyledContainer>
         <StyledOverviewContainer>
           <h1>Retailer</h1>
@@ -44,6 +45,7 @@ export default function Buy({ sneakers }) {
 }
 
 const StyledContainer = styled.section`
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -55,12 +57,14 @@ const StyledContainer = styled.section`
 
 const StyledOverviewContainer = styled.section`
   position: relative;
-  border: 2px solid black;
   width: 80vw;
-  height: auto;
+  height: 80vh;
   border-radius: 40px;
   margin-top: 10px;
-  padding: 2px;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #dadada;
+  box-shadow: 0 5px 15px;
 
   h1 {
     font-size: 30px;
@@ -79,7 +83,7 @@ const StyledOverviewContainer = styled.section`
 const StyledLinkContainer = styled.section`
   border: 1px solid black;
   margin: 10px;
-  background-color: lightgray;
+  background-color: #7fbcc1;
   h3 {
     font-size: 18px;
     font-weight: bold;
@@ -98,10 +102,13 @@ const StyledButtonContainer = styled.section`
   padding: 10px;
   display: flex;
   justify-content: center;
+  margin-top: 80px;
 
   .back-button {
     display: inline-block;
     margin: 10px;
-    padding: 10px;
+    padding: 12px;
+    background-color: #7fbcc1;
+    border-radius: 20px;
   }
 `;
