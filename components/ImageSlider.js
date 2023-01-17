@@ -24,9 +24,9 @@ export default function ImageSlider({ pictures }) {
           <img src={allPictures[index]} />
         </div>
         <StyledIconContainer>
-          <StyledArrowLeft size="30px" className="left" onClick={handlePrev} />
+          <StyledArrowLeft size="35px" className="left" onClick={handlePrev} />
           <StyledArrowRight
-            size="30px"
+            size="35px"
             className="right"
             onClick={handleNext}
           />

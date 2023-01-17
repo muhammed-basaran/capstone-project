@@ -94,7 +94,7 @@ const StyledButton = styled.button`
   p {
     position: absolute;
     top: 20px;
-    right: 7px;
+    right: 5px;
   }
 `;
 
@@ -113,7 +113,7 @@ const StyledOverviewContainer = styled.section`
   .fav {
     width: 2rem;
     position: absolute;
-    right: 20px;
+    right: 18px;
   }
 
   img {
@@ -192,6 +192,7 @@ const StyledButtonContainer = styled.section`
     padding: 10px;
     background-color: #7fbcc1;
     border-radius: 20px;
+    font-size: 15px;
   }
 
   .buy-button {
@@ -200,5 +201,6 @@ const StyledButtonContainer = styled.section`
     margin: 10px;
     background-color: #7fbcc1;
     border-radius: 20px;
+    font-size: 15px;
   }
 `;

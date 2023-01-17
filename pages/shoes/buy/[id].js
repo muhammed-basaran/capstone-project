@@ -114,5 +114,6 @@ const StyledButtonContainer = styled.section`
     padding: 12px;
     background-color: #7fbcc1;
     border-radius: 20px;
+    font-size: 16px;
   }
 `;
