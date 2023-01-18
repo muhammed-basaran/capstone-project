@@ -55,14 +55,14 @@ export default function Itemlist({ sneakers, onClick, selectedIcon }) {
 
 const StyledItemListContainer = styled.section`
   position: relative;
-  border: 0px solid black;
-  width: 70vw;
+  width: 80vw;
   height: auto;
   border-radius: 30px;
-  margin-top: 10px;
-  padding: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 3px;
   box-shadow: 0 5px 12px;
-  background-color: #dadada;
+  background-color: #eee9e9;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
 
@@ -70,11 +70,11 @@ const StyledItemListContainer = styled.section`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 2px;
     padding-top: 10px;
     margin-top: 10px;
-    width: 60%;
+    width: 100%;
     height: auto;
+    border-radius: 20px;
   }
 
   h2 {
@@ -83,6 +83,7 @@ const StyledItemListContainer = styled.section`
     text-align: center;
     color: black;
     text-decoration: none;
+    padding: 0 10px 0 10px;
   }
   a {
     text-decoration: none;
@@ -92,17 +93,17 @@ const StyledItemListContainer = styled.section`
 const StyledButton = styled.button`
   width: 3.2rem;
   position: absolute;
-  right: 5px;
+  right: 0px;
   padding: 0;
   border: none;
-  background-color: #dadada;
+  background-color: transparent;
 `;
 
 const StyledDivContainer = styled.div`
-  padding: 15px;
+  padding: 20px;
   margin: auto;
   width: 90%;
-  height: 20%;
+  height: 10%;
   padding-bottom: 20px;
   background-color: #7fbcc1;
   width: 100%;
@@ -122,5 +123,6 @@ const StyledDivContainer = styled.div`
     padding: 0;
     margin: 0;
     float: right;
+    font-weight: bold;
   }
 `;

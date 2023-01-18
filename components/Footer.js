@@ -31,7 +31,7 @@ const StyledNav = styled.div`
   overflow: hidden;
   width: 100%;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 3px;
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
   bottom: 0;
@@ -49,6 +49,7 @@ const StyledNav = styled.div`
 const StyledFilledHomeIcon = styled(RiHome4Fill)`
   font-size: 3rem;
   color: black;
+  cursor: pointer;
 
   :hover {
     color: white;
@@ -58,6 +59,7 @@ const StyledFilledHomeIcon = styled(RiHome4Fill)`
 const StyledEmptyHomeIcon = styled(RiHome4Line)`
   font-size: 3rem;
   color: black;
+  cursor: pointer;
 
   :hover {
     color: white;
@@ -67,6 +69,7 @@ const StyledEmptyHomeIcon = styled(RiHome4Line)`
 const StyledEmptyFire = styled(AiOutlineFire)`
   font-size: 3rem;
   color: black;
+  cursor: pointer;
 
   :hover {
     color: white;
@@ -76,6 +79,7 @@ const StyledEmptyFire = styled(AiOutlineFire)`
 const StyledFilledFire = styled(AiFillFire)`
   font-size: 3rem;
   color: black;
+  cursor: pointer;
 
   :hover {
     color: white;

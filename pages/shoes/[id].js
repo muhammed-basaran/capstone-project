@@ -71,10 +71,9 @@ export default function Overview({ sneakers, onClick }) {
 }
 
 const StyledContainer = styled.section`
-  margin-top: 90px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   padding: 5px;
   align-items: center;
   overflow: scroll;
@@ -94,26 +93,25 @@ const StyledButton = styled.button`
   p {
     position: absolute;
     top: 20px;
-    right: 7px;
+    right: 5px;
   }
 `;
 
 const StyledOverviewContainer = styled.section`
   position: relative;
-  width: 80vw;
-  height: 80vh;
-  border-radius: 40px;
+  width: 90vw;
+  height: auto;
+  border-radius: 20px;
   margin-top: 10px;
   padding: 2px;
-  overflow: scroll;
-  background-color: #dadada;
+  background-color: #eee9e9;
   box-shadow: 0 5px 15px;
   margin-bottom: 20px;
 
   .fav {
     width: 2rem;
     position: absolute;
-    right: 20px;
+    right: 18px;
   }
 
   img {
@@ -132,16 +130,21 @@ const StyledOverviewContainer = styled.section`
     text-align: center;
     color: black;
     text-decoration: none;
+    padding: 5px;
   }
 `;
 
 const StyledDivContainer = styled.div`
-  padding: 15px;
+  padding: 20px;
   margin: auto;
-  width: 90%;
   height: 10%;
-  padding-bottom: 20px;
-  background-color: #7fbcc1;
+  background: linear-gradient(
+    240deg,
+    rgba(216, 216, 219, 1) 0%,
+    rgba(163, 213, 217, 1) 20%,
+    rgba(127, 188, 193, 1) 80%,
+    rgba(216, 216, 216, 1) 100%
+  );
   border-radius: 20px;
   width: 100%;
   box-shadow: 0 3px 10px;
@@ -173,6 +176,7 @@ const StyledInfoContainer = styled.section`
     font-weight: bold;
     text-align: center;
     color: black;
+    padding: 5px;
   }
 
   p {
@@ -183,8 +187,8 @@ const StyledInfoContainer = styled.section`
 `;
 
 const StyledButtonContainer = styled.section`
-  margin: 10px;
-  padding: 10px;
+  margin: 0 0 20px 0;
+  padding: 0px;
   display: flex;
   justify-content: center;
 
@@ -192,15 +196,29 @@ const StyledButtonContainer = styled.section`
     display: inline-block;
     margin: 10px;
     padding: 10px;
-    background-color: #7fbcc1;
+    background: linear-gradient(
+      240deg,
+      rgba(216, 216, 219, 1) 0%,
+      rgba(163, 213, 217, 1) 20%,
+      rgba(127, 188, 193, 1) 80%,
+      rgba(216, 216, 216, 1) 100%
+    );
     border-radius: 20px;
+    font-size: 15px;
   }
 
   .buy-button {
     display: inline-block;
     padding: 10px;
     margin: 10px;
-    background-color: #7fbcc1;
+    background: linear-gradient(
+      240deg,
+      rgba(216, 216, 219, 1) 0%,
+      rgba(163, 213, 217, 1) 20%,
+      rgba(127, 188, 193, 1) 80%,
+      rgba(216, 216, 216, 1) 100%
+    );
     border-radius: 20px;
+    font-size: 15px;
   }
 `;
