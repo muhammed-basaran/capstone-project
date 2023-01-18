@@ -10,7 +10,7 @@ This App is the capstone-project of my web development bootcamp @neuefische and 
 
 # Demo
 
-![Have a look at on Vercel 👀]([https://capstone-project-khaki.vercel.app/])
+[Have a look at on Vercel 👀]([https://capstone-project-khaki.vercel.app/])
 
 
 # Tech Stack
