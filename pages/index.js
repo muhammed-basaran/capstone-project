@@ -1,16 +1,7 @@
-import Header from "../components/Header";
-import Card from "../components/Card";
-import Footer from "../components/Footer";
-import Filter from "../components/Filter";
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function Home({
-  sneakers,
-  onClick,
-  selectedIcon,
-  handleSelectedIcon,
-}) {
+export default function Home() {
   return (
     <>
       <StyledStartingPageContainer>
