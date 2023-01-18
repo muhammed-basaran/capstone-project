@@ -58,7 +58,7 @@ export default function Overview({ sneakers, onClick }) {
             <Link href="/">
               <button className="back-button">BACK</button>
             </Link>
-            <Link href={`/shoes/buy/${id}`}>
+            <Link href={`/sneakers/buy/${id}`}>
               <button className="buy-button" sneakers={sneakers}>
                 FORWARD
               </button>
