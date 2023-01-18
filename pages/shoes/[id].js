@@ -104,7 +104,7 @@ const StyledOverviewContainer = styled.section`
   border-radius: 20px;
   margin-top: 10px;
   padding: 2px;
-  background-color: #dadada;
+  background-color: #eee9e9;
   box-shadow: 0 5px 15px;
   margin-bottom: 20px;
 
@@ -138,7 +138,13 @@ const StyledDivContainer = styled.div`
   padding: 20px;
   margin: auto;
   height: 10%;
-  background-color: #7fbcc1;
+  background: linear-gradient(
+    240deg,
+    rgba(216, 216, 219, 1) 0%,
+    rgba(163, 213, 217, 1) 20%,
+    rgba(127, 188, 193, 1) 80%,
+    rgba(216, 216, 216, 1) 100%
+  );
   border-radius: 20px;
   width: 100%;
   box-shadow: 0 3px 10px;
@@ -170,6 +176,7 @@ const StyledInfoContainer = styled.section`
     font-weight: bold;
     text-align: center;
     color: black;
+    padding: 5px;
   }
 
   p {
@@ -189,7 +196,13 @@ const StyledButtonContainer = styled.section`
     display: inline-block;
     margin: 10px;
     padding: 10px;
-    background-color: #7fbcc1;
+    background: linear-gradient(
+      240deg,
+      rgba(216, 216, 219, 1) 0%,
+      rgba(163, 213, 217, 1) 20%,
+      rgba(127, 188, 193, 1) 80%,
+      rgba(216, 216, 216, 1) 100%
+    );
     border-radius: 20px;
     font-size: 15px;
   }
@@ -198,7 +211,13 @@ const StyledButtonContainer = styled.section`
     display: inline-block;
     padding: 10px;
     margin: 10px;
-    background-color: #7fbcc1;
+    background: linear-gradient(
+      240deg,
+      rgba(216, 216, 219, 1) 0%,
+      rgba(163, 213, 217, 1) 20%,
+      rgba(127, 188, 193, 1) 80%,
+      rgba(216, 216, 216, 1) 100%
+    );
     border-radius: 20px;
     font-size: 15px;
   }

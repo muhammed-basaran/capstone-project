@@ -62,8 +62,8 @@ const StyledOverviewContainer = styled.section`
   margin-top: 10px;
   padding: 5px;
   overflow: hidden;
-  background-color: #dadada;
-  box-shadow: 0 5px 15px;
+  background-color: #eee9e9;
+  box-shadow: 0 3px 10px;
   margin-bottom: 20px;
 
   p {
@@ -90,7 +90,13 @@ const StyledBorderBottom = styled.div`
 const StyledLinkContainer = styled.section`
   border: 1px solid black;
   margin: 20px;
-  background-color: #7fbcc1;
+  background: linear-gradient(
+    240deg,
+    rgba(216, 216, 219, 1) 0%,
+    rgba(163, 213, 217, 1) 20%,
+    rgba(127, 188, 193, 1) 80%,
+    rgba(216, 216, 216, 1) 100%
+  );
   border-radius: 20px;
 
   h3 {
@@ -117,7 +123,13 @@ const StyledButtonContainer = styled.section`
     display: inline-block;
     margin: 10px;
     padding: 12px;
-    background-color: #7fbcc1;
+    background: linear-gradient(
+      240deg,
+      rgba(216, 216, 219, 1) 0%,
+      rgba(163, 213, 217, 1) 20%,
+      rgba(127, 188, 193, 1) 80%,
+      rgba(216, 216, 216, 1) 100%
+    );
     border-radius: 20px;
     font-size: 15px;
   }

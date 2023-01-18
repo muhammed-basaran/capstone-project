@@ -62,7 +62,7 @@ const StyledItemListContainer = styled.section`
   margin-bottom: 20px;
   padding: 3px;
   box-shadow: 0 5px 12px;
-  background-color: #dadada;
+  background-color: #eee9e9;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
 
