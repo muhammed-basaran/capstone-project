@@ -14,7 +14,7 @@ export default function Home({
   return (
     <>
       <StyledStartingPageContainer>
-        <StyledLink href="/sneakers">start choosing</StyledLink>
+        <StyledLink href="/sneakers">click to start choosing</StyledLink>
       </StyledStartingPageContainer>
     </>
   );
@@ -35,11 +35,11 @@ const StyledStartingPageContainer = styled.section`
 const StyledLink = styled(Link)`
   position: absolute;
   bottom: 150px;
-  left: 140px;
+  left: 115px;
   text-decoration: none;
   color: black;
   font-size: 14px;
-  text-shadow: 0px 1px;
+
   cursor: pointer;
 
   :hover {
