@@ -55,12 +55,12 @@ export default function Itemlist({ sneakers, onClick, selectedIcon }) {
 
 const StyledItemListContainer = styled.section`
   position: relative;
-  border: 0px solid black;
-  width: 70vw;
+  width: 80vw;
   height: auto;
   border-radius: 30px;
-  margin-top: 10px;
-  padding: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 3px;
   box-shadow: 0 5px 12px;
   background-color: #dadada;
   overflow: hidden;
@@ -70,10 +70,9 @@ const StyledItemListContainer = styled.section`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 2px;
     padding-top: 10px;
     margin-top: 10px;
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: 20px;
   }
