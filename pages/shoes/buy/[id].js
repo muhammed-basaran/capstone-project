@@ -49,10 +49,8 @@ const StyledContainer = styled.section`
   margin-top: 100px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   padding: 5px;
   align-items: center;
-  overflow: scroll;
   font-family: Arial, Helvetica, sans-serif;
 `;
 
@@ -71,6 +69,7 @@ const StyledOverviewContainer = styled.section`
   p {
     text-align: center;
     font-size: 17px;
+    font-style: italic;
   }
 `;
 const StyledCaption = styled.h1`
@@ -90,12 +89,12 @@ const StyledBorderBottom = styled.div`
 
 const StyledLinkContainer = styled.section`
   border: 1px solid black;
-  margin: 10px;
+  margin: 20px;
   background-color: #7fbcc1;
   border-radius: 20px;
 
   h3 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
     color: black;
@@ -112,7 +111,7 @@ const StyledButtonContainer = styled.section`
   padding: 10px;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 40px;
 
   .back-button {
     display: inline-block;
@@ -120,6 +119,6 @@ const StyledButtonContainer = styled.section`
     padding: 12px;
     background-color: #7fbcc1;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 15px;
   }
 `;

@@ -130,6 +130,7 @@ const StyledOverviewContainer = styled.section`
     text-align: center;
     color: black;
     text-decoration: none;
+    padding: 5px;
   }
 `;
 

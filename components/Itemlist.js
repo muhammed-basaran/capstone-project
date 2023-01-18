@@ -123,5 +123,6 @@ const StyledDivContainer = styled.div`
     padding: 0;
     margin: 0;
     float: right;
+    font-weight: bold;
   }
 `;
