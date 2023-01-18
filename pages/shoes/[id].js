@@ -71,10 +71,9 @@ export default function Overview({ sneakers, onClick }) {
 }
 
 const StyledContainer = styled.section`
-  margin-top: 90px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   padding: 5px;
   align-items: center;
   overflow: scroll;
@@ -100,12 +99,11 @@ const StyledButton = styled.button`
 
 const StyledOverviewContainer = styled.section`
   position: relative;
-  width: 80vw;
-  height: 80vh;
-  border-radius: 40px;
+  width: 90vw;
+  height: auto;
+  border-radius: 20px;
   margin-top: 10px;
   padding: 2px;
-  overflow: scroll;
   background-color: #dadada;
   box-shadow: 0 5px 15px;
   margin-bottom: 20px;
@@ -181,8 +179,8 @@ const StyledInfoContainer = styled.section`
 `;
 
 const StyledButtonContainer = styled.section`
-  margin: 10px;
-  padding: 10px;
+  margin: 0 0 20px 0;
+  padding: 0px;
   display: flex;
   justify-content: center;
 

@@ -21,7 +21,8 @@ export default function Buy({ sneakers }) {
       <Header />
       <StyledContainer>
         <StyledOverviewContainer>
-          <h1>Retailer Page</h1>
+          <StyledCaption>Retailer Page</StyledCaption>
+          <StyledBorderBottom />
 
           <p>Click for visiting the retailers Homepage:</p>
           {shops.map((shop) => (
@@ -45,7 +46,7 @@ export default function Buy({ sneakers }) {
 }
 
 const StyledContainer = styled.section`
-  margin-top: 90px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -67,19 +68,24 @@ const StyledOverviewContainer = styled.section`
   box-shadow: 0 5px 15px;
   margin-bottom: 20px;
 
-  h1 {
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    color: black;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
-  }
-
   p {
     text-align: center;
     font-size: 17px;
   }
+`;
+const StyledCaption = styled.h1`
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+`;
+
+const StyledBorderBottom = styled.div`
+  position: relative;
+  width: 65vw;
+  border-bottom: 3px solid gray;
+  left: 1.5rem;
 `;
 
 const StyledLinkContainer = styled.section`
@@ -106,7 +112,7 @@ const StyledButtonContainer = styled.section`
   padding: 10px;
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 50px;
 
   .back-button {
     display: inline-block;
