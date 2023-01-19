@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <>
       <StyledNav>
-        <Link href={"/shoes"} onClick={() => setIsActive(false)}>
+        <Link href={"/sneakers"} onClick={() => setIsActive(false)}>
           {isActive == false ? (
             <StyledFilledHomeIcon />
           ) : (

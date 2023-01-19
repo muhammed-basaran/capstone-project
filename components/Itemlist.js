@@ -15,8 +15,8 @@ export default function Itemlist({ sneakers, onClick, selectedIcon }) {
               <FavoriteIcon isFavorite={sneaker.isFavorite} />
             </StyledButton>
 
-            <Link href={`/../shoes/${sneaker.id}`}>
-              <img src={sneaker.img} max-width="200px" max-height="200px" />
+            <Link href={`/../sneakers/${sneaker.id}`}>
+              <img src={sneaker.img} />
               <h2 className="itemName">{sneaker.name}</h2>
             </Link>
             <StyledDivContainer>

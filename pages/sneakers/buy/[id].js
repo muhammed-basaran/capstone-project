@@ -35,7 +35,7 @@ export default function Buy({ sneakers }) {
             </>
           ))}
           <StyledButtonContainer>
-            <Link href={`/shoes/${id}`}>
+            <Link href={`/sneakers/${id}`}>
               <button className="back-button">BACK</button>
             </Link>
           </StyledButtonContainer>

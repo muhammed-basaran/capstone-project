@@ -15,7 +15,7 @@ export default function FavItemlist({ sneakers, onClick }) {
             <FavoriteIcon isFavorite={likedSneaker.isFavorite} />
           </StyledButton>
 
-          <Link href={`/../shoes/${likedSneaker.id}`}>
+          <Link href={`/../sneakers/${likedSneaker.id}`}>
             <img src={likedSneaker.img} max-width="200px" max-height="200px" />
             <h2 className="itemName">{likedSneaker.name}</h2>
           </Link>
