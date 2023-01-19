@@ -16,7 +16,7 @@ export default function Itemlist({ sneakers, onClick, selectedIcon }) {
             </StyledButton>
 
             <Link href={`/../sneakers/${sneaker.id}`}>
-              <img src={sneaker.img} max-width="200px" max-height="200px" />
+              <img src={sneaker.img} />
               <h2 className="itemName">{sneaker.name}</h2>
             </Link>
             <StyledDivContainer>
