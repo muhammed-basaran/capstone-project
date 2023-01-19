@@ -58,13 +58,6 @@ export default function Filter({ selectedIcon, handleSelectedIcon }) {
             />
           </StyledBrandCircle>
           <StyledBrandCircle>
-            <StyledBrandPuma
-              size="70px"
-              onClick={() => handleSelectedIcon("puma")}
-              color={selectedIcon === "puma" ? "#7fbcc1" : ""}
-            />
-          </StyledBrandCircle>
-          <StyledBrandCircle>
             <StyledBrandNewBalance
               size="70px"
               onClick={() => handleSelectedIcon("new balance")}
