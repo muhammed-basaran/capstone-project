@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import styled from "styled-components";
 import Header from "../../../components/Header";
+import Head from "next/head";
 
 export default function Buy({ sneakers }) {
   const router = useRouter();
@@ -18,6 +19,15 @@ export default function Buy({ sneakers }) {
 
   return (
     <>
+      <Head>
+        <title>SNEAK PICK</title>
+        <link rel="icon" href="/favicon.ico"></link>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/apple-touch-icon.png"
+        ></link>
+      </Head>
       <Header />
       <StyledContainer>
         <StyledOverviewContainer>

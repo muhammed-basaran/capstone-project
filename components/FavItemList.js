@@ -16,7 +16,7 @@ export default function FavItemlist({ sneakers, onClick }) {
           </StyledButton>
 
           <Link href={`/../sneakers/${likedSneaker.id}`}>
-            <img src={likedSneaker.img} max-width="200px" max-height="200px" />
+            <img src={likedSneaker.img} />
             <h2 className="itemName">{likedSneaker.name}</h2>
           </Link>
           <StyledDivContainer>
