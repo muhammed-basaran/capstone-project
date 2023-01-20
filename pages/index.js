@@ -1,9 +1,19 @@
 import styled from "styled-components";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>SNEAK PICK</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/apple-touch-icon.png"
+        ></link>
+      </Head>
       <StyledStartingPageContainer>
         <StyledLink href="/sneakers">click to start choosing</StyledLink>
       </StyledStartingPageContainer>
