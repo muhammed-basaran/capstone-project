@@ -31,7 +31,6 @@ export default function FavItemlist({ sneakers, onClick }) {
 
 const StyledItemListContainer = styled.section`
   position: relative;
-  border: 0px solid black;
   width: 70vw;
   height: auto;
   border-radius: 30px;
@@ -62,6 +61,10 @@ const StyledItemListContainer = styled.section`
   }
   a {
     text-decoration: none;
+  }
+  @media screen and (min-width: 500px) {
+    width: 80%;
+    height: auto;
   }
 `;
 

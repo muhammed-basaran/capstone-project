@@ -73,7 +73,7 @@ export default function Filter({ selectedIcon, handleSelectedIcon }) {
 const StyledContentContainer = styled.div`
   display: grid;
   overflow-x: scroll;
-  margin: 90px 20px 20px -25px;
+  margin: 90px 6px 20px -30px;
   padding-bottom: 10px;
   border-bottom: 2px solid gray;
 
