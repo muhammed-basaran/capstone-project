@@ -88,6 +88,10 @@ const StyledItemListContainer = styled.section`
   a {
     text-decoration: none;
   }
+
+  @media screen and (min-width: 500px) {
+    width: 85%;
+  }
 `;
 
 const StyledButton = styled.button`

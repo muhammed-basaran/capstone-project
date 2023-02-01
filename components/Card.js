@@ -22,7 +22,6 @@ export default function Card({
 }
 
 const StyledCardContainer = styled.section`
-  border: 0px solid black;
   display: flex;
   flex-direction: column;
   gap: 10px;

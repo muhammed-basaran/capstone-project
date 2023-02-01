@@ -44,6 +44,12 @@ const StyledNav = styled.div`
     rgba(127, 188, 193, 1) 80%,
     rgba(216, 216, 216, 1) 100%
   );
+
+  @media screen and (min-width: 500px) {
+    width: 450px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+  }
 `;
 
 const StyledFilledHomeIcon = styled(RiHome4Fill)`

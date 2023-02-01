@@ -31,17 +31,39 @@ const StyledStartingPageContainer = styled.section`
   background-color: #e4f4fc;
   z-index: 1;
   position: relative;
+
+  @media screen and (min-width: 500px) {
+    width: 450px;
+    height: 750px;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    background-color: #e4f4fc;
+    z-index: 1;
+    position: relative;
+    margin: 40px auto;
+  }
 `;
 
 const StyledLink = styled(Link)`
   position: absolute;
   bottom: 150px;
-  left: 115px;
+  left: 120px;
   text-decoration: none;
   color: black;
   font-size: 14px;
-
   cursor: pointer;
+
+  @media screen and (min-width: 500px) {
+    position: absolute;
+    bottom: 150px;
+    left: 150px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+  }
 
   :hover {
     color: white;

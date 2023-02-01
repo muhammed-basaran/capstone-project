@@ -76,6 +76,14 @@ const StyledContentContainer = styled.div`
   margin: 90px 20px 20px -25px;
   padding-bottom: 10px;
   border-bottom: 2px solid gray;
+
+  @media screen and (min-width: 500px) {
+    display: grid;
+    overflow-x: scroll;
+    margin: 90px 1px 20px -30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid gray;
+  }
 `;
 
 const StyledIconContainer = styled.ul`
