@@ -47,8 +47,7 @@ const StyledNav = styled.div`
 
   @media screen and (min-width: 500px) {
     width: 450px;
-    margin: 0 auto 30px;
-    overflow: hidden;
+    margin: 0 auto 20px;
   }
 `;
 

@@ -42,7 +42,7 @@ export default function Home({
 }
 
 const StyledDivForDesktop = styled.div`
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 500px), (min-height: 900px) {
     margin: 40px auto 30px auto;
     width: 450px;
     height: 750px;
