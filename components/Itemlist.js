@@ -90,7 +90,7 @@ const StyledItemListContainer = styled.section`
   }
 
   @media screen and (min-width: 500px) {
-    width: 85%;
+    width: 75%;
   }
 `;
 

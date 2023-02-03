@@ -84,6 +84,7 @@ const StyledContainer = styled.section`
     width: 450px;
     height: 750px;
     margin: 40px auto;
+    overflow: hidden;
   }
 `;
 
@@ -141,9 +142,14 @@ const StyledOverviewContainer = styled.section`
 
   @media screen and (min-width: 500px) {
     width: 80%;
-    height: 650px;
+    height: 750px;
     margin-top: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    overflow: scroll;
+
+    h2 {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -177,6 +183,11 @@ const StyledDivContainer = styled.div`
     margin: 0;
     float: right;
   }
+  @media screen and (min-width: 500px) {
+    padding: 15px;
+    margin-bottom: 20px;
+    height: 8%;
+  }
 `;
 
 const StyledInfoContainer = styled.section`
@@ -200,9 +211,14 @@ const StyledInfoContainer = styled.section`
   }
 
   @media screen and (min-width: 500px) {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 14px;
+    }
+
     p {
-      margin-bottom: 0;
+      font-size: 12px;
     }
   }
 `;
