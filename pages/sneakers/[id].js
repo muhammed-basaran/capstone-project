@@ -36,8 +36,8 @@ export default function Overview({ sneakers, onClick }) {
 
   return (
     <>
-      <Header />
       <StyledContainer>
+        <Header />
         <StyledOverviewContainer>
           <StyledButton onClick={(event) => onClick(event, id)}>
             <FavoriteIcon className="fav" isFavorite={isFavorite} />
@@ -79,6 +79,13 @@ const StyledContainer = styled.section`
   overflow: scroll;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 500px) {
+    width: 450px;
+    height: 750px;
+    margin: 40px auto;
+    overflow: hidden;
+  }
 `;
 
 const StyledButton = styled.button`
@@ -132,6 +139,18 @@ const StyledOverviewContainer = styled.section`
     text-decoration: none;
     padding: 5px;
   }
+
+  @media screen and (min-width: 500px) {
+    width: 80%;
+    height: 750px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    overflow: scroll;
+
+    h2 {
+      font-size: 16px;
+    }
+  }
 `;
 
 const StyledDivContainer = styled.div`
@@ -164,6 +183,11 @@ const StyledDivContainer = styled.div`
     margin: 0;
     float: right;
   }
+  @media screen and (min-width: 500px) {
+    padding: 15px;
+    margin-bottom: 20px;
+    height: 8%;
+  }
 `;
 
 const StyledInfoContainer = styled.section`
@@ -183,6 +207,19 @@ const StyledInfoContainer = styled.section`
     font-size: 14px;
     padding: 5px;
     margin: 10px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 500px) {
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -220,5 +257,14 @@ const StyledButtonContainer = styled.section`
     );
     border-radius: 20px;
     font-size: 15px;
+  }
+  @media screen and (min-width: 500px) {
+    .back-button {
+      margin-top: -30px;
+    }
+
+    .buy-button {
+      margin-top: -30px;
+    }
   }
 `;

@@ -28,8 +28,8 @@ export default function Buy({ sneakers }) {
           href="/apple-touch-icon.png"
         ></link>
       </Head>
-      <Header />
       <StyledContainer>
+        <Header />
         <StyledOverviewContainer>
           <StyledCaption>Retailer Page</StyledCaption>
           <StyledBorderBottom />
@@ -62,6 +62,12 @@ const StyledContainer = styled.section`
   padding: 5px;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+
+  @media screen and (min-width: 500px) {
+    width: 450px;
+    height: 750px;
+    margin: 40px auto;
+  }
 `;
 
 const StyledOverviewContainer = styled.section`
@@ -80,6 +86,12 @@ const StyledOverviewContainer = styled.section`
     text-align: center;
     font-size: 17px;
     font-style: italic;
+  }
+
+  @media screen and (min-width: 500px) {
+    width: 80%;
+    height: 80%;
+    margin: 110px auto;
   }
 `;
 const StyledCaption = styled.h1`
@@ -132,6 +144,7 @@ const StyledButtonContainer = styled.section`
   .back-button {
     display: inline-block;
     margin: 10px;
+
     padding: 12px;
     background: linear-gradient(
       240deg,
@@ -142,5 +155,9 @@ const StyledButtonContainer = styled.section`
     );
     border-radius: 20px;
     font-size: 15px;
+  }
+
+  @media screen and (min-width: 500px) {
+    margin: 25px;
   }
 `;

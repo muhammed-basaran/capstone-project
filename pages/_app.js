@@ -1,4 +1,4 @@
-import GlobalStyles from "../components/GlobalStyles";
+import GlobalStyles from "../src/GlobalStyles";
 import { useState, useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
